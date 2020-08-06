@@ -1,0 +1,242 @@
+*,
+*::before,
+*::after {
+   box-sizing: border-box; 
+}
+
+/**/
+/**/
+*:root {
+    --clr-primary: rgba(128, 13, 236, 0.979);
+    --clr-black: rgba(0, 0, 0, 0.616);
+    --clr-light: rgba(255, 255, 255, 0.973);
+    --clr-yellow: rgba(228, 195, 10, 0.897);
+    
+    --fw-normal: 400;
+    --fw-bold: 700;
+    --fw-black: 900; 
+}
+
+body{
+    width: 100%;
+    max-width: 90%;
+    margin: 2em auto;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--clr-black);
+    background: var(--clr-white);
+}
+
+.header{
+    margin:auto;
+    text-align: center; 
+}
+.logo-text{
+    font-size: 1.5rem;
+    font-weight: var(--fw-bold); 
+    letter-spacing: 1em;
+    margin: .7em 0;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+    font-size: 0.6rem;
+    list-style-type: none;
+    text-transform: uppercase;
+    font-weight: var(--fw-bold);
+    overflow: hidden;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: inherit;
+    padding: 0.5em;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5em;
+}
+
+.icon-item {
+    padding: 1.3em;
+}
+
+.banner-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.books {
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.cover-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 2em;
+    box-shadow: 1px 2px 15px 0  rgba(158, 156, 156, 0.418), 
+                1px 2px 15px 0  rgba(158, 156, 156, 0.418),
+                0 2px 15px 0  rgba(158, 156, 156, 0.418);
+}
+
+h2 {
+    font-size: 0.7rem;
+    font-weight: var(--fw-bold);
+    margin-bottom: -0.7em;
+}
+h3, .price-tag-new {
+    font-size: 1rem;
+    font-weight: var(--fw-bold);
+    margin-bottom: 0em;
+}
+
+span.fa-star, .review, .price-tag-old {
+    font-size: 0.7rem;
+    opacity: 0.75;
+}
+
+span.checked {
+    color: var(--clr-yellow);
+}
+
+p {
+    font-size: 0.6rem;
+    text-transform: capitalize;
+    line-height: 1.4em;
+}
+
+.button {
+    margin: 1em 0;
+    font-family: inherit;
+    padding: 1em 8em;
+    font-size: 0.5rem;
+    background-color: var(--clr-light);
+    border: 1px solid var(--clr-primary);
+}
+
+.button:hover {
+    border: 2px solid rgba(0, 162, 255, 0.979);  
+}
+
+
+
+@media only screen and (min-width: 31.25em) {
+   .books {
+       display: flex;
+       flex-flow: row wrap;
+       width: 100%;
+   }
+   
+   .cover {
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    justify-content: center;
+   }
+
+   .book-image {
+    max-width: 40%;
+   }
+
+   .info {
+       align-self: center;
+       padding-left: 1em;
+       margin-top:2.5em;
+   }
+
+     
+} 
+
+@media only screen and (min-width: 48em) {
+    .header {
+        display: grid;
+        grid-template-columns: repeat(12, [col-start] 1fr);
+        grid-gap: 0.5em;
+    }
+
+    .logo-text {
+        grid-column: 2;
+        grid-row: 1;
+        margin-left: 1.5em
+    }
+
+    .nav {
+        display: contents;
+    }
+    .nav-list {
+        grid-column: col-start 3/ span 8;
+        align-self: center;
+    }
+
+    .icon {
+        grid-column: col-start 11 / span 12;
+        grid-row: 1;
+    }
+    .icon-item {
+        padding: 0.8em
+    }
+    .banner {
+        margin: -25px 0;
+    }
+    
+    .books {
+        display: flex;
+        flex-flow: row wrap;
+        max-width: 90%;
+        justify-content: center;
+        margin: -3em auto;
+    }
+
+    .cover {
+        flex: 2 20em;
+        margin: 1em auto;
+    }
+
+    .cover-image {
+        flex: 2 25em;
+    }
+
+    .info {
+        flex: 1 2 8em;
+        
+    }
+    
+}
+
+
+
+    /* .header-tag {
+        margin:0;
+        padding: 0;
+        width: 90%;
+        margin-left: auto;
+        margin-right:auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+           }
+    .logo-text {
+        flex: 1 5%;
+        justify-content: flex-start;
+        font-size: 1rem;
+    }
+    .nav-list {
+        flex: 1 80%;
+        justify-content: center; 
+    }
+    .icon-list {
+        flex: 1 5%;
+        justify-content: flex-end; 
+        font-size: 0.3rem;
+    }
+  */
